@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="font-family: sans-serif">
+    <div id="content" style="visibility: unset"></div>
+
+    <script>
+      window.onload = () => {
+        const cont = document.getElementById("content");
+        const getter = window.location.href.split("?")[1];
+        fetch("/" + getter)
+          .then((r) => r.json())
+          .then((r) => {
+            const tot = r["total"];
+            const pros = [];
+
+            for (let i = 0; i < r.items.length; i++) {
+              pros.push({
+                name: r.items[i][0],
+                p: (r.items[i][1] / r.total) * 100,
+              });
+            }
+            for (let i = 0; i < pros.length; i++) {
+              const tw = document.createElement("span");
+              const tw2 = document.createElement("span");
+              tw2.style =
+                "color: white; position: absolute; left: 2em; font-size: .8em; margin-top: .17em;";
+              tw2.appendChild(document.createTextNode(pros[i].name));
+              const text = document.createTextNode(parseInt(pros[i].p) + "%");
+              tw.appendChild(text);
+              tw.style = "margin-left: 1em;";
+              const con = document.createElement("div");
+              con.style =
+                "display: flex; margin: 1em; vertical-align: center; width: 600px;";
+
+              const child = document.createElement("div");
+              //child.style = "background: red;";
+              child.style.width = pros[i].p + "%";
+              child.style.background = "#1e325e";
+              child.style.height = "20px";
+              child.style["border-radius"] = "5px";
+
+              con.appendChild(tw2);
+              con.appendChild(child);
+              con.appendChild(tw);
+              cont.appendChild(con);
+            }
+          });
+      };
+    </script>
+  </body>
+</html>
