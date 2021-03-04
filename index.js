@@ -18,27 +18,27 @@ var corsOptions = {
 app.use(cors(corsOptions));
 
 const dr = {
-    kebabnorsk: 0,
-    nordlending: 0,
-    sorlending: 0
+    'Kebabnorsk': 15,
+    'Nordlending': 34,
+    'Sørlending': 51
 }
 
 const du = {
-    stavanger: 0,
-    finmark: 0,
-    bergen: 0
+    'Stavanger': 73,
+    'Finmark': 19,
+    'Bergen': 8
 }
 
 const vr = {
-    samlePenger: 0,
-    hjelpeBestemor: 0,
-    levereMat: 0
+    'Samle inn penger': 46,
+    'Hjelpe bestemor': 38,
+    'Levere mat': 16
 }
 
 const vu = {
-    kokeOving: 0,
-    spisePizza: 0,
-    gjemmeSeg: 0
+    'Koke øving': 59,
+    'Spise pizza': 17,
+    'Gjemme seg': 24
 }
 
 app.get("/", (req, res) => {
