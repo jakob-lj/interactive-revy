@@ -23,6 +23,6 @@ app.post("/", (req, res) => {
     return res.status(200).send("Ok")
 })
 
-app.listen(80, () => {
-    console.log("listeing on 80")
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`listeing on  ${process.env.PORT || 3000}`)
 })
