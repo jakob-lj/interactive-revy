@@ -30,15 +30,15 @@ const du = {
 }
 
 const vr = {
-    'Samle inn penger': 46,
+    'Samle inn penger': 16,
     'Hjelpe bestemor': 38,
-    'Levere mat': 16
+    'Levere mat': 46
 }
 
 const vu = {
-    'Koke øving': 59,
+    'Koke øving': 24,
     'Spise pizza': 17,
-    'Gjemme seg': 24
+    'Gjemme seg': 59
 }
 
 app.get("/", (req, res) => {
