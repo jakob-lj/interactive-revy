@@ -23,6 +23,6 @@ app.post("/", (req, res) => {
     return res.status(200).send("Ok")
 })
 
-app.listen(9000, () => {
-    console.log("listeing on 9000")
+app.listen(80, () => {
+    console.log("listeing on 80")
 })
