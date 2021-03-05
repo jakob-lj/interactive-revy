@@ -19,26 +19,26 @@ app.use(cors(corsOptions));
 
 const dr = {
     'Kebabnorsk': 15,
-    'Nordlending': 34,
-    'Sørlending': 51
+    'Nordlending': 29,
+    'Teknikksjef fra stavanger': 78
 }
 
 const du = {
-    'Stavanger': 73,
-    'Finmark': 19,
-    'Bergen': 8
+    'Manussjef': 43,
+    'Finmark': 36,
+    'Bergen': 21
 }
 
 const vr = {
-    'Samle inn penger': 16,
-    'Hjelpe bestemor': 38,
+    'Be om gratis revy': 99,
+    'Hjelpe bestemor': 34,
     'Levere mat': 46
 }
 
 const vu = {
     'Koke øving': 24,
     'Spise pizza': 17,
-    'Gjemme seg': 59
+    'Gjemme seg for HS': 59
 }
 
 app.get("/", (req, res) => {
