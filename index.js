@@ -24,13 +24,13 @@ const dr = {
 }
 
 const du = {
-    'Manussjef': 43,
+    'Manussjef fra Trøndelag': 43,
     'Finmark': 36,
     'Bergen': 21
 }
 
 const vr = {
-    'Be om gratis revy': 99,
+    'Gjemme seg for HS': 99,
     'Hjelpe bestemor': 34,
     'Levere mat': 46
 }
@@ -38,7 +38,7 @@ const vr = {
 const vu = {
     'Koke øving': 24,
     'Spise pizza': 17,
-    'Gjemme seg for HS': 59
+    'Be om gratis revy': 59
 }
 
 app.get("/", (req, res) => {
